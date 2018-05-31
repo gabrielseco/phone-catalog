@@ -1,2 +1,2 @@
 export * from './HttpClient';
-export * from './FakeHttpClient';
+export * from './HttpClientFactory';

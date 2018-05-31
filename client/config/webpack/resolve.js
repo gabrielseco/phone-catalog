@@ -4,6 +4,7 @@ const SRC = path.join(__dirname, '../../src');
 
 const resolve = {
   alias: {
+    actions: path.join(SRC, 'actions'),
     adapters: path.join(SRC, 'adapters'),
     components: path.join(SRC, 'components'),
     config: path.join(SRC, 'config'),
