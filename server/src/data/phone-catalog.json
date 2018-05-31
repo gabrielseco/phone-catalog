@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Iphone X",
+    "manufacturer": "Apple Inc",
+    "price": "999$"
+  },
+  {
+    "id": 2,
+    "name": "Samsung Galaxy S9",
+    "manufacturer": "Samsung",
+    "price": "899$"
+  }
+]
