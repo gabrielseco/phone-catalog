@@ -12,7 +12,8 @@
     "prefer-template": 1,
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "no-underscore-dangle": ["error", { "allowAfterThis": true }],
-    "camelcase": [0, { "properties": "never"}]
+    "camelcase": [0, { "properties": "never"}],
+    "linebreak-style": 0
   },
   "globals": {
     "atom": true

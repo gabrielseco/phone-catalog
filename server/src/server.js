@@ -1,6 +1,9 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import { PhoneCatalogList, PhoneCatalogDetail } from './phone-catalog.controller';
+import {
+  PhoneCatalogList,
+  PhoneCatalogDetail,
+} from './phone-catalog.controller';
 
 const APP_PORT = process.env.PORT || 4000;
 const app = express();
@@ -10,6 +13,15 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 app.use('/', express.static('public'));
+
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', req.headers.origin);
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  if (req.method === 'OPTIONS') {
+    res.end();
+  }
+  next();
+});
 
 app.get('/phones', PhoneCatalogList);
 

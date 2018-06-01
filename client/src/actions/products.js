@@ -1,5 +1,5 @@
 // @flow
-import { HttpClientFactory } from 'adapters';
+import { ProductsServiceFactory } from 'services/ProductsServiceFactory';
 import type { Dispatch } from 'redux';
 import type { Product } from 'flow/product';
 
@@ -34,8 +34,8 @@ function getProductsFailure(): GET_PRODUCTS_FAILURE_ACTION {
 
 export function getProducts() {
   return (dispatch: Dispatch) => {
-    return HttpClientFactory()
-      .get('/phones')
+    return ProductsServiceFactory()
+      .getProducts()
       .then(response => {
         dispatch(getProductsSuccess(response.data));
       })
