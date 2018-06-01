@@ -48,6 +48,7 @@
     "react/jsx-filename-extension": 0,
     "react/no-array-index-key": 0,
     "react/no-did-mount-set-state": 0,
+    "react/prop-types": 0,
     "space-before-function-paren": [
       2,
       "never"

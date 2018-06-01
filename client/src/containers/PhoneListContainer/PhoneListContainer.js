@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Header } from 'components';
-import { getProducts } from './../../actions';
+import { Header, Spinner } from 'components';
+import { getProductsList } from 'actions/products';
 import type { Product } from 'flow/product';
 import type { Dispatch } from 'redux';
-/* import styles from './PhotoListContainer.scss';
+/* import styles from './PhoneListContainer.scss';
  */
 type Props = {
   products: Product[],
+  isLoading: boolean,
+  isLoaded: boolean,
   dispatch: Dispatch
 };
 
-class PhotoListContainer extends Component<Props, {}> {
+class PhoneListContainer extends Component<Props, {}> {
   constructor(props) {
     super(props);
     this.state = {};
@@ -19,24 +21,25 @@ class PhotoListContainer extends Component<Props, {}> {
 
   componentDidMount() {
     const { dispatch } = this.props;
-    dispatch(getProducts());
+    dispatch(getProductsList());
   }
 
   render() {
     return (
       <div>
         <Header />
-        {JSON.stringify(this.props.products)}
+        {this.props.isLoading ? <Spinner /> : null}
+        {this.props.isLoaded ? JSON.stringify(this.props.products) : null}
       </div>
     );
   }
 }
 
-export { PhotoListContainer as PhotoListContainerTesting, mapStateToProps };
+export { PhoneListContainer as PhotoListContainerTesting, mapStateToProps };
 
 const mapStateToProps = state => ({
   products: state.products.products,
   isLoading: state.products.isLoading,
   isLoaded: state.products.isLoaded
 });
-export default connect(mapStateToProps)(PhotoListContainer);
+export default connect(mapStateToProps)(PhoneListContainer);

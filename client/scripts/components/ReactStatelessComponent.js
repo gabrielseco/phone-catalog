@@ -31,7 +31,6 @@ class ReactStatelessComponent extends Component {
   defaultReactComponent(component) {
     return `
       import React from 'react';
-      import PropTypes from 'prop-types';
       import styles from './${component}.scss';
       
       const ${component} = () => (
@@ -39,9 +38,7 @@ class ReactStatelessComponent extends Component {
           <h2>${component} Stateful Component generated from the cli</h2>
         </div>
       );
-      
-      ${component}.propTypes = {};
-      
+            
       export default ${component};
     `;
   }

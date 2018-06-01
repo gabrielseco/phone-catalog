@@ -19,6 +19,12 @@ export type ProductActions =
   | GET_PRODUCTS_SUCCESS_ACTION
   | GET_PRODUCTS_FAILURE_ACTION;
 
+function getProducts(): GET_PRODUCTS_ACTION {
+  return {
+    type: GET_PRODUCTS
+  };
+}
+
 function getProductsSuccess(products: Product[]): GET_PRODUCTS_SUCCESS_ACTION {
   return {
     type: GET_PRODUCTS_SUCCESS,
@@ -32,8 +38,9 @@ function getProductsFailure(): GET_PRODUCTS_FAILURE_ACTION {
   };
 }
 
-export function getProducts() {
+export function getProductsList() {
   return (dispatch: Dispatch) => {
+    dispatch(getProducts());
     return ProductsServiceFactory()
       .getProducts()
       .then(response => {

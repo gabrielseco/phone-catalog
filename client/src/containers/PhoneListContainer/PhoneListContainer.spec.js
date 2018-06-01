@@ -10,6 +10,6 @@ describe('PhotoListContainer suite', () => {
 });
  */
 
-describe('Todo PhotoListContainer', () => {
+describe('Todo PhoneListContainer', () => {
   it('should todo', () => {});
 });

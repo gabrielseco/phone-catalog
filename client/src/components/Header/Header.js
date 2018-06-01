@@ -7,6 +7,4 @@ const Header = () => (
   </header>
 );
 
-Header.propTypes = {};
-
 export default Header;
