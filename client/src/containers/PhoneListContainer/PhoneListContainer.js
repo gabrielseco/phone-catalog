@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Header, Spinner } from 'components';
+import { Header, ProductsList, Spinner } from 'components';
 import { getProductsList } from 'actions/products';
 import type { Product } from 'flow/product';
 import type { Dispatch } from 'redux';
@@ -14,7 +14,7 @@ type Props = {
 };
 
 class PhoneListContainer extends Component<Props, {}> {
-  constructor(props) {
+  constructor(props: Props) {
     super(props);
     this.state = {};
   }
@@ -29,13 +29,13 @@ class PhoneListContainer extends Component<Props, {}> {
       <div>
         <Header />
         {this.props.isLoading ? <Spinner /> : null}
-        {this.props.isLoaded ? JSON.stringify(this.props.products) : null}
+        {this.props.isLoaded ? (
+          <ProductsList products={this.props.products} />
+        ) : null}
       </div>
     );
   }
 }
-
-export { PhoneListContainer as PhotoListContainerTesting, mapStateToProps };
 
 const mapStateToProps = state => ({
   products: state.products.products,
@@ -43,3 +43,5 @@ const mapStateToProps = state => ({
   isLoaded: state.products.isLoaded
 });
 export default connect(mapStateToProps)(PhoneListContainer);
+
+export { PhoneListContainer as PhotoListContainerTesting, mapStateToProps };

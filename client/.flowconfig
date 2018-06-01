@@ -1,6 +1,7 @@
 [ignore]
 .*/node_modules/cypress/.*
 .*/node_modules/findup/.*
+.*/node_modules/eslint-plugin-jsx-a11y/.*
 
 [include]
 

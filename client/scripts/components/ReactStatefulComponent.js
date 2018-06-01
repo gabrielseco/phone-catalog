@@ -71,7 +71,7 @@ class ReactStatefulComponent extends Component {
     return `
       import React from 'react';
       import { shallow } from 'enzyme';
-      import { ${component} } from './${component}';
+      import ${component} from './${component}';
 
       describe('${component} suite', () => {
         it('renders ${component} without any state injected', () => {
