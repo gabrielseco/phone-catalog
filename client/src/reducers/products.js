@@ -1,14 +1,14 @@
-// @flow strict
+// @flow
 import {
   GET_PRODUCTS,
   GET_PRODUCTS_SUCCESS,
   GET_PRODUCTS_FAILURE,
-  ProductActions
-} from './../actions';
+  type ProductActions
+} from '../actions/products';
 
-import type { Product } from 'flow/product';
+import { type Product } from './../flow/product';
 
-type ProductsState = {
+export type ProductsState = {
   products: Product[],
   isLoading: boolean,
   isLoaded: boolean
@@ -45,6 +45,7 @@ const products = (
         isLoading: false,
         isLoaded: false
       };
+    case 'INVENTED':
     default:
       return state;
   }

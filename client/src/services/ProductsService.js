@@ -1,8 +1,8 @@
-// @flow strict
+// @flow
 import { HttpClient } from 'adapters/HttpClient';
 import { BASE_URL } from 'config';
-import type { AxiosPromise } from 'axios';
-import type { Product } from 'flow/product';
+import { type AxiosPromise } from 'axios';
+import { type Product } from './../flow/product';
 
 export class ProductsService {
   httpClient: HttpClient;

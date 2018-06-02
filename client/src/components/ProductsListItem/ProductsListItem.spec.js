@@ -5,7 +5,7 @@ import ProductsListItem from './ProductsListItem';
 
 describe('ProductsListItem suite', () => {
   it('should render the ProductsListItem component', () => {
-    const component = shallow(<ProductsListItem />);
+    const component = shallow(<ProductsListItem product={{}} />);
     expect(component).toBeDefined();
   });
 });

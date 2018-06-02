@@ -58,6 +58,7 @@
     "babel-preset-react": "^6.24.1",
     "commitizen": "^2.9.6",
     "css-loader": "^0.28.10",
+    "css-module-flow": "^1.0.0",
     "cypress": "^3.0.1",
     "cz-conventional-changelog": "^2.1.0",
     "enzyme": "^3.3.0",

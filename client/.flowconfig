@@ -11,6 +11,7 @@
 
 [options]
 module.system=haste
+module.name_mapper='^.*\.scss$' -> 'css-module-flow'
 module.name_mapper='^actions' ->'<PROJECT_ROOT>/src/actions'
 module.name_mapper='^adapters' ->'<PROJECT_ROOT>/src/adapters'
 module.name_mapper='^components' ->'<PROJECT_ROOT>/src/components'
@@ -19,10 +20,3 @@ module.name_mapper='^containers' ->'<PROJECT_ROOT>/src/containers'
 module.name_mapper='^flow' ->'<PROJECT_ROOT>/src/flow'
 module.name_mapper='^reducers' ->'<PROJECT_ROOT>/src/reducers'
 module.name_mapper='^services' ->'<PROJECT_ROOT>/src/services'
-
-
-[strict]
-nonstrict-import
-unclear-type
-unsafe-getters-setters
-untyped-type-import
