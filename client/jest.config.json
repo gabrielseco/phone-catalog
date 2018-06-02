@@ -1,7 +1,13 @@
 {
   "collectCoverage": true,
   "coverageDirectory": "coverage",
-  "coveragePathIgnorePatterns" : ["<rootDir>/config" ],
+  "coveragePathIgnorePatterns" : [
+    "<rootDir>/config",
+    "<rootDir>/src/components/index.js",
+    "<rootDir>/src/config",
+    "<rootDir>/src/fakes",
+    "<rootDir>/src/types"
+  ],
   "coverageThreshold": {
     "global": {
       "branches": 10,
