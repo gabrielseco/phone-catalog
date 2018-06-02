@@ -1,10 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
-import { Router } from '@reach/router';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 
 import configureStore from './store/configureStore';
-import { App, PhoneListContainer, PhotoDetailContainer } from './containers';
+import { PhoneListContainer, PhotoDetailContainer } from './containers';
+import { Header } from './components';
 
 import './styles/main.scss';
 
@@ -13,10 +14,13 @@ const store = configureStore();
 const app = (
   <Provider store={store}>
     <Router>
-      <App path="/">
-        <PhoneListContainer default />
-        <PhotoDetailContainer path="/detail/:id" />
-      </App>
+      <div>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={PhoneListContainer} />
+          <Route path="/detail/:id" component={PhotoDetailContainer} />
+        </Switch>
+      </div>
     </Router>
   </Provider>
 );
