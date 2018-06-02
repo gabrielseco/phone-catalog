@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Header, ProductsList, Spinner } from 'components';
+import { ProductsList, Spinner } from 'components';
 import { getProductsList } from 'actions/products';
 import { type Product } from './../../types/product';
 import { type Dispatch } from 'redux';
@@ -26,20 +26,12 @@ class PhoneListContainer extends Component<Props, {}> {
     dispatch(getProductsList());
   }
 
-  handleNavigation(evt: any) {
-    console.log('evt navigation', evt);
-  }
-
   render() {
     return (
       <div>
-        <Header />
         {this.props.isLoading ? <Spinner /> : null}
         {this.props.isLoaded ? (
-          <ProductsList
-            products={this.props.products}
-            onClick={evt => this.handleNavigation(evt)}
-          />
+          <ProductsList products={this.props.products} />
         ) : null}
       </div>
     );

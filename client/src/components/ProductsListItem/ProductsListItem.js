@@ -1,11 +1,11 @@
 // @flow
 import React from 'react';
+import { Link } from '@reach/router';
 import { type Product } from './../../types/product';
 import styles from './ProductsListItem.scss';
 
 type ProductListItemProps = {
-  product: Product,
-  onClick: Function
+  product: Product
 };
 
 const ProductsListItem = (props: ProductListItemProps) => (
@@ -15,7 +15,7 @@ const ProductsListItem = (props: ProductListItemProps) => (
     <div className={styles.body}>
       <p className={styles.price}>{props.product.price}</p>
     </div>
-    <button onClick={evt => props.onClick(evt)}>See more</button>
+    <Link to={`detail/${props.product.id}`}>See more</Link>
   </div>
 );
 
