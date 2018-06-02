@@ -1,0 +1,1 @@
+# Photo Catalog [![Build Status](https://travis-ci.com/gabrielseco/phone-catalog.svg?branch=master)](https://travis-ci.com/gabrielseco/phone-catalog) [![Coverage Status](https://coveralls.io/repos/github/gabrielseco/phone-catalog/badge.svg?branch=master)](https://coveralls.io/github/gabrielseco/phone-catalog?branch=master)
