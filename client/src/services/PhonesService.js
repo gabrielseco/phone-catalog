@@ -2,15 +2,15 @@
 import { HttpClient } from 'adapters/HttpClient';
 import { BASE_URL } from 'config';
 import { type AxiosPromise } from 'axios';
-import { type Product } from './../types/product';
+import { type Phone } from './../types/phone';
 
-export class ProductsService {
+export class PhonesService {
   httpClient: HttpClient;
   constructor() {
     this.httpClient = new HttpClient(BASE_URL);
   }
 
-  getProducts(): AxiosPromise<Product[]> {
+  getPhones(): AxiosPromise<Phone[]> {
     return this.httpClient.get('/phones');
   }
 }

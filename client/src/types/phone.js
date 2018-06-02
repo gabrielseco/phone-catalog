@@ -1,5 +1,5 @@
 // @flow
-export type Product = {
+export type Phone = {
   id: number,
   name: string,
   manufacturer: string,

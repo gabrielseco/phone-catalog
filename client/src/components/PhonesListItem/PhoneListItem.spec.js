@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import ProductsListItem from './ProductsListItem';
+import PhoneListItem from './PhoneListItem';
 
-describe('ProductsListItem suite', () => {
+describe('PhoneListItem suite', () => {
   it('should render the ProductsListItem component', () => {
-    const component = shallow(<ProductsListItem product={{}} />);
+    const component = shallow(<PhoneListItem phone={{}} />);
     expect(component).toBeDefined();
   });
 });

@@ -3,16 +3,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
-import { getProductsList } from 'actions/products';
+import { getPhonesList } from 'actions/phones';
 import { Spinner } from 'components';
 import { type Dispatch } from 'redux';
 import { type RootState } from './../../reducers';
-import { type Product } from './../../types/product';
+import { type Phone } from './../../types/phone';
 /* import styles from './PhoneDetailContainer.scss';
  */
 
 type Props = {
-  product: Product,
+  phone: Phone,
   dispatch: Dispatch
 };
 
@@ -24,31 +24,31 @@ class PhoneDetailContainer extends Component<Props, {}> {
 
   componentDidMount() {
     const { dispatch } = this.props;
-    if (this.props.product === undefined) {
-      dispatch(getProductsList());
+    if (this.props.phone === undefined) {
+      dispatch(getPhonesList());
     }
   }
 
   render() {
-    if (this.props.product === undefined) {
+    if (this.props.phone === undefined) {
       return <Spinner />;
     }
     return (
       <div>
-        <img src={this.props.product.image} alt={this.props.product.name} />
-        <h2>{this.props.product.name}</h2>
-        <h2>{this.props.product.manufacturer}</h2>
-        <h2>{this.props.product.price}</h2>
+        <img src={this.props.phone.image} alt={this.props.phone.name} />
+        <h2>{this.props.phone.name}</h2>
+        <h2>{this.props.phone.manufacturer}</h2>
+        <h2>{this.props.phone.price}</h2>
       </div>
     );
   }
 }
 
 const mapStateToProps = (state: RootState, ownProps: any) => ({
-  product: state.products.products.find(
-    product => product.id === parseInt(ownProps.match.params.id, 10)
+  phone: state.phones.phones.find(
+    phone => phone.id === parseInt(ownProps.match.params.id, 10)
   )
 });
 export default withRouter(connect(mapStateToProps)(PhoneDetailContainer));
 
-export { PhoneDetailContainer as PhotoDetailContainerTesting, mapStateToProps };
+export { PhoneDetailContainer as PhoneDetailContainerTesting, mapStateToProps };

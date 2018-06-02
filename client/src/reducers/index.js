@@ -1,13 +1,13 @@
 import { combineReducers } from 'redux';
 
-import products, { type ProductsState } from './products';
+import phones, { type PhonesState } from './phones';
 
 export type RootState = {
-  products: ProductsState
+  phones: PhonesState
 };
 
 const rootReducer = combineReducers({
-  products: products
+  phones: phones
 });
 
 export default rootReducer;

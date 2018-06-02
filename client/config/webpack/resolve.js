@@ -9,6 +9,7 @@ const resolve = {
     components: path.join(SRC, 'components'),
     config: path.join(SRC, 'config'),
     containers: path.join(SRC, 'containers'),
+    fakes: path.join(SRC, 'fakes'),
     reducers: path.join(SRC, 'reducers'),
     services: path.join(SRC, 'services'),
     styles: path.join(SRC, 'styles'),

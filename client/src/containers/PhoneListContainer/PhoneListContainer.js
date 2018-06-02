@@ -1,15 +1,15 @@
 // @flow
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { ProductsList, Spinner } from 'components';
-import { getProductsList } from 'actions/products';
-import { type Product } from './../../types/product';
+import { PhonesList, Spinner } from 'components';
+import { getPhonesList } from 'actions/phones';
+import { type Phone } from './../../types/phone';
 import { type Dispatch } from 'redux';
 import { type RootState } from './../../reducers';
 /* import styles from './PhoneListContainer.scss';
  */
 type Props = {
-  products: Product[],
+  phones: Phone[],
   isLoading: boolean,
   isLoaded: boolean,
   dispatch: Dispatch
@@ -23,25 +23,23 @@ class PhoneListContainer extends Component<Props, {}> {
 
   componentDidMount() {
     const { dispatch } = this.props;
-    dispatch(getProductsList());
+    dispatch(getPhonesList());
   }
 
   render() {
     return (
       <div>
         {this.props.isLoading ? <Spinner /> : null}
-        {this.props.isLoaded ? (
-          <ProductsList products={this.props.products} />
-        ) : null}
+        {this.props.isLoaded ? <PhonesList phones={this.props.phones} /> : null}
       </div>
     );
   }
 }
 
 const mapStateToProps = (state: RootState) => ({
-  products: state.products.products,
-  isLoading: state.products.isLoading,
-  isLoaded: state.products.isLoaded
+  phones: state.phones.phones,
+  isLoading: state.phones.isLoading,
+  isLoaded: state.phones.isLoaded
 });
 export default connect(mapStateToProps)(PhoneListContainer);
 
