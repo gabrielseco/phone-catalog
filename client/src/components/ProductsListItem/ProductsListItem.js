@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { type Product } from 'flow/product';
+import { type Product } from './../../types/product';
 import styles from './ProductsListItem.scss';
 
 type ProductListItemProps = {

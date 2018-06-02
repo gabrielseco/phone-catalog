@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Header, ProductsList, Spinner } from 'components';
 import { getProductsList } from 'actions/products';
-import { type Product } from './../../flow/product';
+import { type Product } from './../../types/product';
 import { type Dispatch } from 'redux';
 import { type RootState } from './../../reducers';
 /* import styles from './PhoneListContainer.scss';

@@ -1,7 +1,7 @@
 // @flow
 import { ProductsServiceFactory } from 'services/ProductsServiceFactory';
 import { type Dispatch } from 'redux';
-import { type Product } from './../flow/product';
+import { type Product } from './../types/product';
 
 export const GET_PRODUCTS = 'GET_PRODUCTS';
 export const GET_PRODUCTS_SUCCESS = 'GET_PRODUCTS_SUCCESS';

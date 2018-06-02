@@ -6,7 +6,7 @@ import {
   type ProductActions
 } from '../actions/products';
 
-import { type Product } from './../flow/product';
+import { type Product } from './../types/product';
 
 export type ProductsState = {
   products: Product[],
