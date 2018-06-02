@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import PhotoDetailContainer from './PhotoDetailContainer';
+import PhoneDetailContainer from './PhoneDetailContainer';
 
 describe('PhotoDetailContainer suite', () => {
   it('renders PhotoDetailContainer without any state injected', () => {
-    const component = shallow(<PhotoDetailContainer />);
+    const component = shallow(<PhoneDetailContainer />);
     expect(component).toBeDefined();
   });
 });
