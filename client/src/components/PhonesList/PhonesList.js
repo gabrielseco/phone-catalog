@@ -10,7 +10,7 @@ type PhonesListProps = {
 
 const PhonesList = (props: PhonesListProps): PhoneListItem[] => {
   return props.phones.map((phone, index) => {
-    return <PhoneListItem product={phone} key={index} />;
+    return <PhoneListItem phone={phone} key={index} />;
   });
 };
 
