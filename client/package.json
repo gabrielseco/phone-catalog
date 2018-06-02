@@ -19,6 +19,7 @@
     "serve:prod": "http-server public -p 8080",
     "test": "jest --config ./jest.config.json",
     "test:watch": "jest --watchAll --coverage --config ./jest.config.json",
+    "test:prod": "npm run lint:js && npm run lint:css && npm run test -- --coverage --no-cache",
     "lint:js": "eslint ./src/**/*.js --color",
     "lint:css": "stylelint 'src/**/*.scss'",
     "generate:stateful": "node ./scripts/stateful.js",
