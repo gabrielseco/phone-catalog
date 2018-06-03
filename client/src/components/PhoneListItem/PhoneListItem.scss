@@ -1,6 +1,11 @@
 @import '~styles/settings/global';
 @import '~styles/tools/mixins/all';
 
+$button-action-background: #6495ed;
+$button-action-color: #ffffff;
+
+$price-color: #a02929;
+
 .container {
   align-items: center;
   background: #ffffff;
@@ -41,14 +46,14 @@
 }
 
 .price {
-  color: #a02929;
+  color: $price-color;
   font-weight: bold;
   margin-bottom: 1.5em;
 }
 
 .btnAction {
-  background: #6495ed;
-  color: #ffffff;
+  background: $button-action-background;
+  color: $button-action-color;
   display: flex;
   justify-content: center;
   padding: 0.5em;

@@ -1,2 +1,57 @@
-.PhoneDetailContainer {
+@import '~styles/settings/global';
+@import '~styles/tools/mixins/all';
+
+$price-background: #a02929;
+$price-color: #ffffff;
+
+.container {
+  display: block;
+  @include respond-to(medium) {
+    display: flex;
+  }
+}
+
+.imageContainer {
+  display: block;
+  text-align: center;
+  @include respond-to(medium) {
+    display: inline-block;
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+  text-align: center;
+  text-transform: uppercase;
+  @include respond-to(medium) {
+    text-align: left;
+  }
+}
+
+.manufacturer {
+  font-weight: bold;
+  text-align: center;
+  @include respond-to(medium) {
+    text-align: left;
+  }
+}
+
+.price {
+  align-items: center;
+  background: $price-background;
+  color: $price-color;
+  display: flex;
+  height: 3em;
+  justify-content: center;
+  text-align: center;
+  @include respond-to(medium) {
+    width: 6em;
+  }
 }

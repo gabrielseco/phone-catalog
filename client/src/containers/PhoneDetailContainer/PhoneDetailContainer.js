@@ -8,8 +8,7 @@ import { SpinnerContainer } from 'containers';
 import { type Dispatch } from 'redux';
 import { type RootState } from './../../reducers';
 import { type Phone } from './../../types/phone';
-/* import styles from './PhoneDetailContainer.scss';
- */
+import styles from './PhoneDetailContainer.scss';
 
 type Props = {
   phone: Phone,
@@ -34,12 +33,18 @@ class PhoneDetailContainer extends Component<Props, {}> {
       return <SpinnerContainer />;
     }
     return (
-      <div>
-        <img src={this.props.phone.image} alt={this.props.phone.name} />
-        <h2>{this.props.phone.name}</h2>
-        <p>{this.props.phone.manufacturer}</p>
-        <p>{this.props.phone.price}</p>
-        <p>{this.props.phone.description}</p>
+      <div className={styles.container}>
+        <div className={styles.imageContainer}>
+          <img src={this.props.phone.image} alt={this.props.phone.name} />
+        </div>
+        <div className={styles.info}>
+          <h2 className={styles.title}>{this.props.phone.name}</h2>
+          <p className={styles.manufacturer}>
+            Built by: {this.props.phone.manufacturer}
+          </p>
+          <p className={styles.price}>{this.props.phone.price}</p>
+          <p className={styles.description}>{this.props.phone.description}</p>
+        </div>
       </div>
     );
   }

@@ -7,8 +7,7 @@ import { getPhonesList } from 'actions/phones';
 import { type Phone } from './../../types/phone';
 import { type Dispatch } from 'redux';
 import { type RootState } from './../../reducers';
-/* import styles from './PhoneListContainer.scss';
- */
+
 type Props = {
   phones: Phone[],
   isLoading: boolean,
