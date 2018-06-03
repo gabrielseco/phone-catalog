@@ -7,7 +7,7 @@
     "cypress:open": "cypress open",
     "clean:modules": "rm -rf node_modules",
     "coverage:open": "open coverage/lcov-report/index.html",
-    "prepush": "npm run test && npm run build",
+    "prepush": "npm run test && npm run build:prod",
     "precommit": "npm run flow && lint-staged",
     "commit": "git-cz",
     "flow": "flow",
