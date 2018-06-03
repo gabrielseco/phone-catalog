@@ -1,0 +1,20 @@
+{
+  "name": "phone-catalog-app",
+  "version": "1.0.0",
+  "description": "## Install",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd server && npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielseco/phone-catalog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielseco/phone-catalog/issues"
+  },
+  "homepage": "https://github.com/gabrielseco/phone-catalog#readme"
+}
