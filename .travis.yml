@@ -13,6 +13,8 @@ node_js:
   - node
 before_install:
   - cd client
+before_script:
+  - cd client
   - npm start
 script:
   - npm run test:prod
