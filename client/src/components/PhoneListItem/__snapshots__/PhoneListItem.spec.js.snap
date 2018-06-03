@@ -3,6 +3,10 @@
 exports[`PhoneListItem suite should render the ProductsListItem component 1`] = `
 <div
   className="container"
+  id="phone-list-item-container-1"
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  tabIndex={0}
 >
   <img
     alt="Iphone X"

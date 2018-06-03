@@ -62,6 +62,7 @@
       "specialLink": [ "hrefLeft", "hrefRight", "to" ],
       "aspects": [ "noHref", "invalidHref", "preferButton" ]
     }],
+    "jsx-a11y/no-noninteractive-tabindex": 0,
     "import/no-extraneous-dependencies": [
       "error",
       {

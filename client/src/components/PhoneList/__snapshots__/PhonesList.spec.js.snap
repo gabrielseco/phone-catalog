@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PhoneList suite should render the ProductsList component 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="container"
+    id="phone-list-item-container-1"
+    onClick={[Function]}
+    onKeyUp={[Function]}
+    tabIndex={0}
+  >
+    <img
+      alt="Iphone X"
+      className="phoneImg"
+      src="https://img.shoppydoo.es/products/7/apple_iphone_x_64gb-300x300.jpg"
+    />
+    <h2
+      className="title"
+    >
+      Iphone X
+    </h2>
+    <p
+      className="price"
+    >
+      999$
+    </p>
+    <a
+      className="btnAction"
+      href="detail/1"
+      onClick={[Function]}
+    >
+      See more
+    </a>
+  </div>
+  <div
+    className="container"
+    id="phone-list-item-container-2"
+    onClick={[Function]}
+    onKeyUp={[Function]}
+    tabIndex={0}
+  >
+    <img
+      alt="Samsung Galaxy S9"
+      className="phoneImg"
+      src="https://www.satugadget.com.my/content/images/thumbs/0008898_samsung-galaxy-s9-plus-256gb-purple-original-malaysia-set_300.jpeg"
+    />
+    <h2
+      className="title"
+    >
+      Samsung Galaxy S9
+    </h2>
+    <p
+      className="price"
+    >
+      899$
+    </p>
+    <a
+      className="btnAction"
+      href="detail/2"
+      onClick={[Function]}
+    >
+      See more
+    </a>
+  </div>
+</div>
+`;

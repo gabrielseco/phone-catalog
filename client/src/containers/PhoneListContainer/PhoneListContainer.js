@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { PhonesList, Spinner } from 'components';
+import { PhoneList, Spinner } from 'components';
 import { getPhonesList } from 'actions/phones';
 import { type Phone } from './../../types/phone';
 import { type Dispatch } from 'redux';
@@ -36,7 +36,7 @@ class PhoneListContainer extends Component<Props, {}> {
             <Spinner />
           </div>
         ) : null}
-        {this.props.isLoaded ? <PhonesList phones={this.props.phones} /> : null}
+        {this.props.isLoaded ? <PhoneList phones={this.props.phones} /> : null}
       </div>
     );
   }

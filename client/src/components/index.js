@@ -1,4 +1,4 @@
 export * from './Header';
-export * from './PhonesList';
-export * from './PhonesListItem';
+export * from './PhoneList';
+export * from './PhoneListItem';
 export * from './Spinner';

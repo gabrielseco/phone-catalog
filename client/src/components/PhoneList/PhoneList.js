@@ -2,13 +2,13 @@
 import React from 'react';
 import { PhoneListItem } from 'components';
 import { type Phone } from './../../types/phone';
-import styles from './PhonesList.scss';
+import styles from './PhoneList.scss';
 
-type PhonesListProps = {
+type PhoneListProps = {
   phones: Phone[]
 };
 
-const PhonesList = (props: PhonesListProps) => {
+const PhoneList = (props: PhoneListProps) => {
   const phones = props.phones.map((phone, index) => {
     return <PhoneListItem phone={phone} key={index} />;
   });
@@ -16,4 +16,4 @@ const PhonesList = (props: PhonesListProps) => {
   return <div className={styles.container}>{phones}</div>;
 };
 
-export default PhonesList;
+export default PhoneList;

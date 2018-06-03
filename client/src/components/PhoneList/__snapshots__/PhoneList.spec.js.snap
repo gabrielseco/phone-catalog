@@ -6,6 +6,10 @@ exports[`PhoneList suite should render the ProductsList component 1`] = `
 >
   <div
     className="container"
+    id="phone-list-item-container-1"
+    onClick={[Function]}
+    onKeyUp={[Function]}
+    tabIndex={0}
   >
     <img
       alt="Iphone X"
@@ -32,6 +36,10 @@ exports[`PhoneList suite should render the ProductsList component 1`] = `
   </div>
   <div
     className="container"
+    id="phone-list-item-container-2"
+    onClick={[Function]}
+    onKeyUp={[Function]}
+    tabIndex={0}
   >
     <img
       alt="Samsung Galaxy S9"

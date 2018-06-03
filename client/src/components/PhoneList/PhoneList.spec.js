@@ -3,17 +3,17 @@ import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import PhoneListItem from './PhoneListItem';
+import PhoneList from './PhoneList';
 import { phonesFake } from 'fakes/phone';
 
-describe('PhoneListItem suite', () => {
-  it('should render the ProductsListItem component', () => {
+describe('PhoneList suite', () => {
+  it('should render the ProductsList component', () => {
     const jsxComponent = (
       <Router>
-        <PhoneListItem phone={phonesFake[0]} />
+        <PhoneList phones={phonesFake} />
       </Router>
     );
-    const component = shallow(jsxComponent);
+    const component = shallow(<PhoneList phones={phonesFake} />);
     const tree = renderer.create(jsxComponent).toJSON();
     expect(component).toBeDefined();
     expect(tree).toMatchSnapshot();
