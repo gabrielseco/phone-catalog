@@ -6,7 +6,7 @@ exports[`PhoneList suite should render the ProductsList component 1`] = `
   role="list"
 >
   <div
-    className="container"
+    className="container phone-list-item"
     id="phone-list-item-container-1"
     onClick={[Function]}
     onKeyUp={[Function]}
@@ -37,7 +37,7 @@ exports[`PhoneList suite should render the ProductsList component 1`] = `
     </a>
   </div>
   <div
-    className="container"
+    className="container phone-list-item"
     id="phone-list-item-container-2"
     onClick={[Function]}
     onKeyUp={[Function]}

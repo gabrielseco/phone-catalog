@@ -2,7 +2,7 @@
 
 exports[`PhoneListItem suite should render the ProductsListItem component 1`] = `
 <div
-  className="container"
+  className="container phone-list-item"
   id="phone-list-item-container-1"
   onClick={[Function]}
   onKeyUp={[Function]}

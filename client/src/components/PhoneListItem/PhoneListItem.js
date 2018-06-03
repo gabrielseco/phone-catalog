@@ -19,22 +19,22 @@ const PhoneListItem = (props: PhoneListItemProps) => {
   };
   return (
     <div
-      className={styles.container}
+      className={`${styles.container} phone-list-item`}
       onClick={() => {
         props.history.push(route);
       }}
       onKeyUp={onKeyUp}
       role="listitem"
       tabIndex={0}
-      id={`phone-list-item-container-${props.phone.id}`}
     >
       <img
         className={styles.phoneImg}
         src={props.phone.image}
         alt={props.phone.name}
+        id={`img-${props.phone.id}`}
       />
-      <h2 className={styles.title}>{props.phone.name}</h2>
-      <p className={styles.price}>{props.phone.price}</p>
+      <h2 className={`${styles.title} title`}>{props.phone.name}</h2>
+      <p className={`${styles.price} price`}>{props.phone.price}</p>
       <a
         href="#"
         className={styles.btnAction}
@@ -43,6 +43,7 @@ const PhoneListItem = (props: PhoneListItemProps) => {
           evt.preventDefault();
           props.history.push(route);
         }}
+        id={`button-${props.phone.id}`}
       >
         See more
       </a>

@@ -4,7 +4,8 @@
   "description": "The client series frontend based in React",
   "main": "index.js",
   "scripts": {
-    "cypress:open": "cypress open",
+    "cypress": "cypress open",
+    "cypress:all": "cypress run",
     "clean:modules": "rm -rf node_modules",
     "coverage:open": "open coverage/lcov-report/index.html",
     "prepush": "npm run test && npm run build:prod",
@@ -72,6 +73,7 @@
     "eslint-config-prettier": "^2.9.0",
     "eslint-import-resolver-webpack": "^0.9.0",
     "eslint-loader": "^2.0.0",
+    "eslint-plugin-cypress": "^2.0.1",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",

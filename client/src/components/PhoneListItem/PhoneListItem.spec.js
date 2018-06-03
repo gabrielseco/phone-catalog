@@ -30,7 +30,7 @@ describe('PhoneListItem suite', () => {
     const component = shallow(jsxComponentWithHistory);
     expect(component).toBeDefined();
 
-    const container = component.find('#phone-list-item-container-1');
+    const container = component.find('.phone-list-item');
     container.simulate('click');
 
     expect(history.push).toHaveBeenCalledWith(route);
@@ -68,7 +68,7 @@ describe('PhoneListItem suite', () => {
     const component = shallow(jsxComponentWithHistory);
     expect(component).toBeDefined();
 
-    const container = component.find('#phone-list-item-container-1');
+    const container = component.find('.phone-list-item');
     container.simulate('keyup', { keyCode: 13 });
 
     expect(history.push).toHaveBeenCalledWith(route);
@@ -84,7 +84,7 @@ describe('PhoneListItem suite', () => {
     const component = shallow(jsxComponentWithHistory);
     expect(component).toBeDefined();
 
-    const container = component.find('#phone-list-item-container-1');
+    const container = component.find('.phone-list-item');
     container.simulate('keyup', { keyCode: 47 });
 
     expect(history.push).not.toHaveBeenCalled();
