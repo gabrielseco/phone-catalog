@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PhoneListItem suite should render the ProductsListItem component 1`] = `
+<div
+  className="container"
+>
+  <img
+    alt="Iphone X"
+    className="phoneImg"
+    src="https://img.shoppydoo.es/products/7/apple_iphone_x_64gb-300x300.jpg"
+  />
+  <h2
+    className="title"
+  >
+    Iphone X
+  </h2>
+  <p
+    className="price"
+  >
+    999$
+  </p>
+  <a
+    className="btnAction"
+    href="detail/1"
+    onClick={[Function]}
+  >
+    See more
+  </a>
+</div>
+`;
