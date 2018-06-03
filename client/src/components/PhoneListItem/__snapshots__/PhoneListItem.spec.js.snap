@@ -3,7 +3,6 @@
 exports[`PhoneListItem suite should render the ProductsListItem component 1`] = `
 <div
   className="container phone-list-item"
-  id="phone-list-item-container-1"
   onClick={[Function]}
   onKeyUp={[Function]}
   role="listitem"
@@ -12,21 +11,23 @@ exports[`PhoneListItem suite should render the ProductsListItem component 1`] = 
   <img
     alt="Iphone X"
     className="phoneImg"
+    id="img-1"
     src="https://img.shoppydoo.es/products/7/apple_iphone_x_64gb-300x300.jpg"
   />
   <h2
-    className="title"
+    className="title title"
   >
     Iphone X
   </h2>
   <p
-    className="price"
+    className="price price"
   >
     999$
   </p>
   <a
     className="btnAction"
     href="#"
+    id="button-1"
     onClick={[Function]}
   >
     See more
