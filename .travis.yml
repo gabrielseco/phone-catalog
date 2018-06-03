@@ -13,9 +13,10 @@ node_js:
   - node
 before_install:
   - cd client
+  - cd ./../server
 before_script:
-  - cd client
   - npm start
+  - cd ./../client
 script:
   - npm run test:prod
   - npm run cypress:all
