@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SpinnerContainer suite should render the SpinnerContainer component 1`] = `
+<div
+  className="spinnerContainer"
+>
+  <div
+    aria-busy="true"
+    aria-live="assertive"
+    className="spinner"
+    role="alertdialog"
+  />
+</div>
+`;

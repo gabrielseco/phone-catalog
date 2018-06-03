@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 import { getPhonesList } from 'actions/phones';
-import { Spinner } from 'components';
+import { SpinnerContainer } from 'containers';
 import { type Dispatch } from 'redux';
 import { type RootState } from './../../reducers';
 import { type Phone } from './../../types/phone';
@@ -31,7 +31,7 @@ class PhoneDetailContainer extends Component<Props, {}> {
 
   render() {
     if (this.props.phone === undefined) {
-      return <Spinner />;
+      return <SpinnerContainer />;
     }
     return (
       <div>

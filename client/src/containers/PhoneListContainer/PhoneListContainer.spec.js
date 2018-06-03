@@ -5,28 +5,29 @@ import {
   mapStateToProps
 } from './PhoneListContainer';
 import { phonesFake } from 'fakes/phone';
-import { PhoneList, Spinner } from 'components';
+import { PhoneList } from 'components';
+import { SpinnerContainer } from 'containers';
 
 const dispatch = jest.fn();
 
 describe('PhoneListContainer', () => {
-  it('renders App with the loading state', () => {
+  it('renders PhoneListContainer with the loading state', () => {
     const wrapper = shallow(
       <PhotoListContainerTesting dispatch={dispatch} isLoading />
     );
 
     expect(wrapper).toBeDefined();
-    expect(wrapper.find(Spinner).length).toBe(1);
+    expect(wrapper.find(SpinnerContainer).length).toBe(1);
     expect(wrapper.find(PhoneList).length).toBe(0);
   });
 
-  it('renders App with the loading state', () => {
+  it('renders PhoneListContainer with the loading state', () => {
     const wrapper = shallow(
       <PhotoListContainerTesting dispatch={dispatch} isLoaded />
     );
 
     expect(wrapper).toBeDefined();
-    expect(wrapper.find(Spinner).length).toBe(0);
+    expect(wrapper.find(SpinnerContainer).length).toBe(0);
     expect(wrapper.find(PhoneList).length).toBe(1);
     expect(dispatch).toHaveBeenCalled();
   });
