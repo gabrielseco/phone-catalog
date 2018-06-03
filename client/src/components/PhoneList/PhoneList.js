@@ -13,7 +13,11 @@ const PhoneList = (props: PhoneListProps) => {
     return <PhoneListItem phone={phone} key={index} />;
   });
 
-  return <div className={styles.container}>{phones}</div>;
+  return (
+    <div role="list" className={styles.container}>
+      {phones}
+    </div>
+  );
 };
 
 export default PhoneList;

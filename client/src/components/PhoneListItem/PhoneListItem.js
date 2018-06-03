@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { Link, withRouter, type History } from 'react-router-dom';
+import { withRouter, type History } from 'react-router-dom';
 import { type Phone } from './../../types/phone';
 import styles from './PhoneListItem.scss';
 
@@ -24,6 +24,7 @@ const PhoneListItem = (props: PhoneListItemProps) => {
         props.history.push(route);
       }}
       onKeyUp={onKeyUp}
+      role="listitem"
       tabIndex={0}
       id={`phone-list-item-container-${props.phone.id}`}
     >
@@ -34,9 +35,17 @@ const PhoneListItem = (props: PhoneListItemProps) => {
       />
       <h2 className={styles.title}>{props.phone.name}</h2>
       <p className={styles.price}>{props.phone.price}</p>
-      <Link className={styles.btnAction} to={route}>
+      <a
+        href="#"
+        className={styles.btnAction}
+        onClick={evt => {
+          evt.stopPropagation();
+          evt.preventDefault();
+          props.history.push(route);
+        }}
+      >
         See more
-      </Link>
+      </a>
     </div>
   );
 };

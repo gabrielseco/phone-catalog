@@ -6,6 +6,7 @@ exports[`PhoneListItem suite should render the ProductsListItem component 1`] = 
   id="phone-list-item-container-1"
   onClick={[Function]}
   onKeyUp={[Function]}
+  role="listitem"
   tabIndex={0}
 >
   <img
@@ -25,7 +26,7 @@ exports[`PhoneListItem suite should render the ProductsListItem component 1`] = 
   </p>
   <a
     className="btnAction"
-    href="detail/1"
+    href="#"
     onClick={[Function]}
   >
     See more

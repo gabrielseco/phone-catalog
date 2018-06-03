@@ -3,12 +3,14 @@
 exports[`PhoneList suite should render the ProductsList component 1`] = `
 <div
   className="container"
+  role="list"
 >
   <div
     className="container"
     id="phone-list-item-container-1"
     onClick={[Function]}
     onKeyUp={[Function]}
+    role="listitem"
     tabIndex={0}
   >
     <img
@@ -28,7 +30,7 @@ exports[`PhoneList suite should render the ProductsList component 1`] = `
     </p>
     <a
       className="btnAction"
-      href="detail/1"
+      href="#"
       onClick={[Function]}
     >
       See more
@@ -39,6 +41,7 @@ exports[`PhoneList suite should render the ProductsList component 1`] = `
     id="phone-list-item-container-2"
     onClick={[Function]}
     onKeyUp={[Function]}
+    role="listitem"
     tabIndex={0}
   >
     <img
@@ -58,7 +61,7 @@ exports[`PhoneList suite should render the ProductsList component 1`] = `
     </p>
     <a
       className="btnAction"
-      href="detail/2"
+      href="#"
       onClick={[Function]}
     >
       See more
