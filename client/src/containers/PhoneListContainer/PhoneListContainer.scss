@@ -1,2 +1,9 @@
-.PhotoListContainer {
+$header-height: 5.625em;
+
+.spinnerContainer {
+  align-items: center;
+  display: flex;
+  height: calc(100vh - #{$header-height});
+  justify-content: center;
 }
+

@@ -6,8 +6,8 @@ import { getPhonesList } from 'actions/phones';
 import { type Phone } from './../../types/phone';
 import { type Dispatch } from 'redux';
 import { type RootState } from './../../reducers';
-/* import styles from './PhoneListContainer.scss';
- */
+import styles from './PhoneListContainer.scss';
+
 type Props = {
   phones: Phone[],
   isLoading: boolean,
@@ -23,13 +23,19 @@ class PhoneListContainer extends Component<Props, {}> {
 
   componentDidMount() {
     const { dispatch } = this.props;
-    dispatch(getPhonesList());
+    if (!this.props.isLoaded) {
+      dispatch(getPhonesList());
+    }
   }
 
   render() {
     return (
       <div>
-        {this.props.isLoading ? <Spinner /> : null}
+        {this.props.isLoading ? (
+          <div className={styles.spinnerContainer}>
+            <Spinner />
+          </div>
+        ) : null}
         {this.props.isLoaded ? <PhonesList phones={this.props.phones} /> : null}
       </div>
     );

@@ -1,2 +1,11 @@
-.ProductsList {
+@import '~styles/settings/global';
+@import '~styles/tools/mixins/all';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @include respond-to(medium) {
+    flex-direction: row;
+  }
 }

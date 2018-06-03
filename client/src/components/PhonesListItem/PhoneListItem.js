@@ -10,12 +10,16 @@ type PhoneListItemProps = {
 
 const PhoneListItem = (props: PhoneListItemProps) => (
   <div className={styles.container}>
-    <img src={props.phone.image} alt={props.phone.name} />
+    <img
+      className={styles.phoneImg}
+      src={props.phone.image}
+      alt={props.phone.name}
+    />
     <h2 className={styles.title}>{props.phone.name}</h2>
-    <div className={styles.body}>
-      <p className={styles.price}>{props.phone.price}</p>
-    </div>
-    <Link to={`detail/${props.phone.id}`}>See more</Link>
+    <p className={styles.price}>{props.phone.price}</p>
+    <Link className={styles.btnAction} to={`detail/${props.phone.id}`}>
+      See more
+    </Link>
   </div>
 );
 

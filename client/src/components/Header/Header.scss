@@ -1,11 +1,12 @@
 $container-background: #d87093;
 $container-color: #ffffff;
+$container-height: 5.625em;
 
 .container {
   align-items: center;
   background: $container-background;
   color: $container-color;
   display: flex;
-  height: 5.625em;
+  height: $container-height;
   justify-content: center;
 }
