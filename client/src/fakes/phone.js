@@ -7,7 +7,10 @@ export const phonesFake: Phone[] = [
     name: 'Iphone X',
     manufacturer: 'Apple Inc',
     price: '999$',
-    image: 'https://img.shoppydoo.es/products/7/apple_iphone_x_64gb-300x300.jpg'
+    image:
+      'https://img.shoppydoo.es/products/7/apple_iphone_x_64gb-300x300.jpg',
+    description:
+      'Lorem fistrum diodeno nostrud te voy a borrar el cerito ut te va a hasé pupitaa. Officia a wan aute irure tiene musho peligro sed nostrud officia qué dise usteer. Jarl labore exercitation reprehenderit consectetur ex. Qué dise usteer irure aliquip officia esse apetecan et ese pedazo de. Ese que llega ut fistro consectetur pupita jarl caballo blanco caballo negroorl reprehenderit. Ut commodo elit nostrud de la pradera se calle ustée. Torpedo ex magna nisi elit.'
   },
   {
     id: 2,
@@ -15,6 +18,8 @@ export const phonesFake: Phone[] = [
     manufacturer: 'Samsung',
     price: '899$',
     image:
-      'https://www.satugadget.com.my/content/images/thumbs/0008898_samsung-galaxy-s9-plus-256gb-purple-original-malaysia-set_300.jpeg'
+      'https://www.satugadget.com.my/content/images/thumbs/0008898_samsung-galaxy-s9-plus-256gb-purple-original-malaysia-set_300.jpeg',
+    description:
+      'Lorem fistrum diodeno nostrud te voy a borrar el cerito ut te va a hasé pupitaa. Officia a wan aute irure tiene musho peligro sed nostrud officia qué dise usteer. Jarl labore exercitation reprehenderit consectetur ex. Qué dise usteer irure aliquip officia esse apetecan et ese pedazo de. Ese que llega ut fistro consectetur pupita jarl caballo blanco caballo negroorl reprehenderit. Ut commodo elit nostrud de la pradera se calle ustée. Torpedo ex magna nisi elit.'
   }
 ];

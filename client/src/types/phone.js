@@ -4,5 +4,6 @@ export type Phone = {
   name: string,
   manufacturer: string,
   price: string,
-  image: string
+  image: string,
+  description: string
 };

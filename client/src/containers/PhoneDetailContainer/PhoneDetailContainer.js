@@ -37,8 +37,9 @@ class PhoneDetailContainer extends Component<Props, {}> {
       <div>
         <img src={this.props.phone.image} alt={this.props.phone.name} />
         <h2>{this.props.phone.name}</h2>
-        <h2>{this.props.phone.manufacturer}</h2>
-        <h2>{this.props.phone.price}</h2>
+        <p>{this.props.phone.manufacturer}</p>
+        <p>{this.props.phone.price}</p>
+        <p>{this.props.phone.description}</p>
       </div>
     );
   }
