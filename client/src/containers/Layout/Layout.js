@@ -1,18 +1,16 @@
 // @flow
 import React from 'react';
-/* import styles from './Layout.scss';
- */
-import { Header } from 'components';
+import { Header, ScrollToTop } from 'components';
 
 type Props = {
   routes: any
 };
 
 const Layout = (props: Props) => (
-  <div>
+  <ScrollToTop>
     <Header />
     {props.routes}
-  </div>
+  </ScrollToTop>
 );
 
 export default Layout;
